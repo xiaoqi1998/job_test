@@ -1,3 +1,4 @@
+
 a=1
 b=1.2
 c='233'
@@ -6,3 +7,9 @@ new_c=float(c)#转换为浮点数
 new_b=int(b)#转换为整数
 print(new_a,new_b,new_c)
 print(type(a),type(b),type(c))
+
+a='我是字符串'
+b=12
+c=1.23
+print(type())
+
