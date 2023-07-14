@@ -5,7 +5,8 @@ def sum(x, y):
     return z
 
 
-x = int(input('输入第一位数'))
-y = int(input('输入第二位数'))
-z = sum(x, y)
-print(z)
+if __name__ == '__main__':
+    x = int(input('输入第一位数'))
+    y = int(input('输入第二位数'))
+    z = sum(x, y)
+    print(z)
