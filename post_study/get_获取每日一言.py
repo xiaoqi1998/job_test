@@ -15,3 +15,6 @@ def oneday():
     print('请求连接：%s \n请求头：%s \n  请求状态：%s  \n 返回结果%s' % (url, header, status, reszult))
     return reszult
     res.close()  # 断开连接
+
+
+oneday()
