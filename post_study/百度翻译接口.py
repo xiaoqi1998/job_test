@@ -1,12 +1,10 @@
-
 import random
 import requests
 from _md5 import *
 from hashlib import md5
 
 
-
-def fanyi(q, to_language):
+def fanyi(q:str, to_language:str):
     url = 'http://fanyi-api.baidu.com/api/trans/vip/translate'
     form = 'auto'
     appid = "20230712001742388"
@@ -19,6 +17,7 @@ def fanyi(q, to_language):
     try:
         req = requests.post(url, params=payload, headers=headers)
         rz = req.json()
+        print(rz['trans_result'][0]['dst'])
         return rz['trans_result'][0]['dst']
     except BaseException:
         error_info = ''
@@ -36,6 +35,3 @@ def fanyi(q, to_language):
             return error_info
         print(error_info)
         return error_info
-
-
-print(fanyi('你别乱搞', 'en'))
